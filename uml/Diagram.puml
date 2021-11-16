@@ -1,6 +1,6 @@
 @startuml
 
-//www.plantuml.com/plantuml/png/ZLLDRniX4Btlh-3egBcaLrTHFjn8aQpAijrUgXumJDOeBBE2mKaRzRyNbjticbsxkR1ctfiFU3FunX6tv2jT2CsTOm8DWQ7xyB6eDLYcgbf35MoEFHf5YclrX-yqj0vxhA1djqRYxdaDJ-tE2J0J75pWRLrh9JWfDCMf0egtubDjrO4Ji3jFX8O9ZGxclVcnuYKS5BmmHr1VnMs00-vt8Jmxe99CTRN3xFjwoRpLbsmD3hqLSEUDrC3ixkB89-L9EMUt8bRvzG266CJrelXR3EvWeamkvNnSkuMm6zdZDQEbj1cZ4ZGGRC8g2EGf_5RhCGIlCV3OxeYJT_CY1-wuPOIemtVWj8LNUb2WPQFjDrv1ipl9M2f7EMCHbfKIps2Pz11tEMF9Tw3V_MEMONtRs7O_einVLc0Tckk6sfZd6UqUjQzCoxja6xBAbDTTyH7-e4Ugj77ue4Uws03cBPYatuOIPbcZSIadp9dgA-_s87DEoZQ9zLqn3QVEcCPIEqOLSgJ4BIvGk8c9E3bnSLQofs4mBflcYKdNjx9OWwNVx4dPhWFE4vD0_wCDsptLc6IR9LgVxfAnPEe2TyAs4LX_ojPU0cqQQ2JDEt0SOYh28YKRXUYHuwgcOZnqPnX7wR7ymED8XEb7Kctw2H-gHxm4vk8wr20w9BU1TSLjx1QBIFbmk1T5Oh_5nl7gV7FbzCzdN-VyZ-PjD42MPeDJz9cYN1sjugfhbf-_6BUbQrBSW96-qly0
+//www.plantuml.com/plantuml/png/ZLLDRniX4Btlh-3egBwaLrTHxBYH8bcLPRkzL3rWcAvHM5Z1uAID-jyBYtU3MIpdmffvRpxWpU1xYzIWQsJ59BMMCAqG53xuZz5IWY6YQIKqtcR9an8eg1H_wLx2oU6W6tXddun8xVC6Vfzsbe4gSFHIpzjM2aPHQ5LTAg1wgpwrHXmf0bauHAq8azh2xDtyrD0QZW9UY4LeRyFMmnvtUn-U7BNWHFIrm-JxPaMSaLEo0QkTOR1mYaiWPdzpvXFpn9oJEGjLVZtwsWY4zQRwLoLtK2YJSZuRrsx0xyPsVytQODoCKGuI4BP-PGZy4ZwNSWp1QmWyjdlXqTbPbGCBQWXgBVqtSTh1ApuAaBpJzXjjeDjTPAo4nPonzCjQi6SmX3i8kvonedkGWt_8ajQt2stt8yZyPGt6QdNNKJlpBACzQEaQTU9DoHQDKFNTKBo7F-WHA-qSFkWHBzQ3UGj6wNU-X4dMQ9JpWZbJVUti0NZEYTdAsD0LPJXsHXcBxHXKo95Qx_paCbkQY4iJ5sSbVHhISTbsJqoylhNHBHZyCoWrkyAB-boZfTqUIuogJI9jo3Ob95hwkBsifm1aE6Dlhm6t7JGIPW3EGvGYB6EoSOW1EQ-g5EDHc3WoeoWfbfrt50Xr_14bAx_VgNH8Qo0shAa2mI6w9TOrDQ5LZDQOJuPz4SWEEzqvtbxfh8p-kVmqN_YNUHjDZy59SeeXKwTMJskew5lbvoz2JMr3YdjGt3NoFm00
 
 class contentController implements Initializable
 class homeController
@@ -67,7 +67,84 @@ class taskRef
 
 class sceneController
 {
-+private Stage stage;
++private Sclass contentController implements Initializable
+          class homeController
+          class taskRef
+          class sceneController
+          class toDoApplication
+
+          class contentController
+          {
+          +private Button close;
+          +private Imageview step1Image;
+
+          +public void initialize(URL url, ResourceBundle rb)
+          +public void closeButton(ActionEvent event)
+          }
+
+          class home
+          {
+          +private Button add;
+          +private Button create;
+          +private Button importButton;
+          +private Button deleteSelected;
+          +private Button deleteAll;
+          +private Button export;
+          +private Button status;
+
+          +private ButtonBar toolBar;
+          +private TextField taskNameField;
+          +private TextField taskListField;
+          +private DatePicker dueDateField;
+          +private Label taskListName;
+
+          +private TableView <Person> taskTable;
+          +private TableColumn<Person, String> taskNameCol;
+          +private TableColumn<Person, String> dueDateCol;;
+          +private TableColumn<Person, String> statusCol;
+
+          +public void createTask()
+          +public void addTask()
+          +public void deleteSelectedPushed()
+          +public void statusPushed()
+          +public void deleteAllPushed()
+          +public void exportPushed()
+          +public void importList()
+          +public void goToDocs(ActionEvent event)
+          +public void initialize()
+          }
+
+          class taskRef
+          {
+          +private SimpleStringProperty taskName;
+          +private SimpleStringProperty dueDate;
+          +private SimpleStringProperty status;
+
+          +public Person(String taskName,  String dueDate, String status )
+          +public String getStatus()
+          +public void setStatus( String status)
+          +public String getDueDate()
+          +public void setDueDate(String dueDate)
+          +public String getFirstName()
+          +public void setFirstName(String taskName)
+          +public String toString()
+          }
+
+          class sceneController
+          {
+          +private Stage stage;
+          +private Scene scene;
+          +private Parent root;
+
+          +public void switchToScene1(ActionEvent event)
+          +public void switchToScene2(ActionEvent event)
+          }
+
+          class toDoApplication
+          {
+          +public void start(Stage stage)
+          +public static void main(String[] args)
+          }tage stage;
 +private Scene scene;
 +private Parent root;
 
